@@ -1,13 +1,27 @@
 package entity;
 
 import java.time.LocalDateTime;
+import jakarta.persistence.*;
 
+
+@Entity
+@Table(name = "users")
 public class user {
     
+    @Id
+    @Column(name = "ID")
     private Long id;
+    
+    @Column(name = "USERNAME")
     private String username;
+
+    @Column(name = "EMAIL")
     private String email;
+
+    @Column(name = "PASSWORD")
     private String password;
+
+    @Column(name = "CREATED_AT")
     private LocalDateTime createdAt;
 
 

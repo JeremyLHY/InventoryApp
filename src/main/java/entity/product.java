@@ -16,7 +16,7 @@ public class product {
     private final String productCode;
     private String category;
     private Double price;
-    private Integer quantity;
+    private final Integer quantity;
     private ProductStatus status;
     private LocalDateTime ProductCreatedAt;
 

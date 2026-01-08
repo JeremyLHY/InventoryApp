@@ -39,7 +39,12 @@ public class stockTransaction {
         return quantity;
     }
 
+    public String getRemark() {
+        return remark;
+    }
 
-
+    public LocalDateTime getTransactionCreated() {
+        return transactionCreated;
+    }
 
 }
