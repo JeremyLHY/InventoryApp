@@ -5,9 +5,9 @@ import java.time.LocalDateTime;
 public class user {
     
     private Long id;
-    private final String username;
-    private final String email;
-    private final String password;
+    private String username;
+    private String email;
+    private String password;
     private LocalDateTime createdAt;
 
 
@@ -37,5 +37,19 @@ public class user {
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = username;
+    }
+
+    
 
 }
