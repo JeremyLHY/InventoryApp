@@ -45,7 +45,7 @@ public class Product {
     private ProductStatus status;
 
     @Column(name = "created_at")
-    private LocalDateTime productCreatedAt = LocalDateTime.now();
+    private final LocalDateTime productCreatedAt = LocalDateTime.now();
 
     protected Product() {
     }
