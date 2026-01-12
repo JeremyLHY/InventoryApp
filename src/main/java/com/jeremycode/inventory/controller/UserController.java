@@ -1,8 +1,13 @@
 package com.jeremycode.inventory.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.jeremycode.inventory.entity.User;
 import com.jeremycode.inventory.service.UserService;
-import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -24,6 +29,6 @@ public class UserController {
     // LOGIN
     @PostMapping("/login")
     public User login(@RequestBody LoginRequest request) {
-        return userService.login(request.getUsername(), request.getPassword());
+        return userService.login(request.getEmail(), request.getPassword());
     }
 }
