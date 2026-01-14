@@ -2,6 +2,9 @@ package com.jeremycode.inventory.entity;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,9 +28,12 @@ public class User {
     @Column(name = "EMAIL", nullable = false, unique = true)
     private String email;
 
+    @JsonIgnore // 2. Hide password from JSON responses
     @Column(name = "PASSWORD", nullable = false)
     private String password;
 
+    // 3. This prevents the "Internal Server Error" during JSON conversion
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss") 
     @Column(name = "CREATED_AT")
     private LocalDateTime createdAt = LocalDateTime.now();
 
