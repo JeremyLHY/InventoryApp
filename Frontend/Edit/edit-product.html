@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="form-card">
+        <header class="form-header">
+            <h1>Edit Product</h1>
+            <p class="subtitle">Update the information for this inventory item.</p>
+        </header>
+        
+        <form id="editForm">
+            <div class="form-group">
+                <label for="productCode">Product Code (Permanent)</label>
+                <input type="text" id="productCode" value="SKU-8821" disabled style="background-color: #f1f5f9; cursor: not-allowed;">
+            </div>
+
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" placeholder="Product Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" id="category" placeholder="Category">
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="price">Price (RM)</label>
+                    <input type="number" id="price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Stock Status</label>
+                <select id="status">
+                    <option value="ACTIVE">ACTIVE</option>
+                    <option value="INACTIVE">INACTIVE</option>
+                    <option value="DISCONTINUED">DISCONTINUED</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-primary">Update Product</button>
+                <button type="button" class="btn-secondary" onclick="window.history.back()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="edit-product.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product - StockMaster</title>
+    <link rel="stylesheet" href="../Inventory/style.css">
+</head>
+<body>
+
+<div class="main-layout">
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <span class="logo-icon">📦</span>
+            <h2>StockMaster</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="../Inventory/inventory.html">Inventory</a>
+            <a href="create-product.html" class="active">Add Product</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-container">
+        <header class="table-header">
+            <div>
+                <h1>Create Product</h1>
+                <p class="subtitle">Enter the details below to add a new item to your inventory.</p>
+            </div>
+        </header>
+
+        <div class="table-card" style="padding: 40px; max-width: 800px;">
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" placeholder="e.g. Wireless Mouse" required>
+                </div>
+
+                <div class="row" style="display: flex; gap: 20px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="productCode">Product Code</label>
+                        <input type="text" id="productCode" placeholder="SKU-123" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" placeholder="Electronics">
+                    </div>
+                </div>
+
+                <div class="row" style="display: flex; gap: 20px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="price">Price (RM)</label>
+                        <input type="number" id="price" placeholder="0.00" step="0.01" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" placeholder="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status">
+                        <option value="ACTIVE">ACTIVE</option>
+                        <option value="INACTIVE">INACTIVE</option>
+                        <option value="DISCONTINUED">DISCONTINUED</option>
+                    </select>
+                </div>
+
+                <div class="action-buttons" style="justify-content: flex-start; margin-top: 20px;">
+                    <button type="submit" class="btn-primary">Save Product</button>
+                    <button type="button" class="btn-edit" onclick="window.history.back()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
+<script src="create-product.js"></script>
+</body>
+</html>
