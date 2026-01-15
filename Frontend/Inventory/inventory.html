@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory Management</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
 
-<div class="main-layout">
-    <aside class="sidebar">
-        <div class="sidebar-logo">
-            <span class="logo-icon">📦</span>
-            <h2>StockMaster</h2>
-        </div>
-        <nav class="sidebar-nav">
-            <a href="inventory.html" class="active">Inventory</a>
-            <a href="../Create/create-product.html">Add Product</a>
-            <a href="login.html">Logout</a>
-        </nav>
-    </aside>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-icon">📦</span>
+                <h2>StockMaster</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="inventory.html" class="active">Inventory</a>
+                <a href="../Create/create-product.html">Create Product</a>
+            </nav>
+        </aside>
 
-    <main class="dashboard-container">
-        <header class="table-header">
-            <div>
-                <h1>Inventory</h1>
-                <p class="subtitle">Manage your product stock and availability</p>
-            </div>
-            <button class="btn-add" onclick="goToCreate()">
-                <span class="plus-icon">+</span> Add Product
-            </button>
-        </header>
+        <main class="dashboard-container">
+            <header class="table-header">
+                <div>
+                    <h1>Inventory</h1>
+                    <p class="subtitle">Manage your product stock and availability</p>
+                </div>
+                <button class="btn-add" onclick="goToCreate()">
+                    <span class="plus-icon">+</span>Create Product
+                </button>
+            </header>
 
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-label">Total Items</span>
-                <span class="stat-value" id="totalCount">0</span>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Total Items</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Inventory Value</span>
+                    <span class="stat-value" id="totalValue">RM 0.00</span>
+                </div>
+                <div class="stat-card low-stock">
+                    <span class="stat-label">Low Stock Alerts</span>
+                    <span class="stat-value" id="lowStockCount">0</span>
+                </div>
             </div>
-            <div class="stat-card">
-                <span class="stat-label">Inventory Value</span>
-                <span class="stat-value" id="totalValue">RM 0.00</span>
-            </div>
-            <div class="stat-card low-stock">
-                <span class="stat-label">Low Stock Alerts</span>
-                <span class="stat-value" id="lowStockCount">0</span>
-            </div>
-        </div>
 
-        <div class="table-card">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Product Details</th>
-                        <th>Category</th>
-                        <th>Price (RM)</th>
-                        <th>Qty</th>
-                        <th>Status</th>
-                        <th class="text-right">Action</th>
-                    </tr>
-                </thead>
-                <tbody id="productTable">
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Product Details</th>
+                            <th>Category</th>
+                            <th class="col-qty">Qty</th>
+                            <th class="col-price">Price (RM)</th>
+                            <th>Status</th>
+                            <th class="text-right">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTable">
                     </tbody>
-            </table>
-        </div>
-    </main>
-</div>
+                </table>
+            </div>
+        </main>
+    </div>
 
-<script src="inventory.js"></script>
+    <script src="inventory.js"></script>
 </body>
+
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Product - StockMaster</title>
     <link rel="stylesheet" href="../Inventory/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -16,8 +17,7 @@
         </div>
         <nav class="sidebar-nav">
             <a href="../Inventory/inventory.html">Inventory</a>
-            <a href="create-product.html" class="active">Add Product</a>
-            <a href="login.html">Logout</a>
+            <a href="create-product.html" class="active">Create Product</a>
         </nav>
     </aside>
 
@@ -39,7 +39,7 @@
                 <div class="row" style="display: flex; gap: 20px;">
                     <div class="form-group" style="flex: 1;">
                         <label for="productCode">Product Code</label>
-                        <input type="text" id="productCode" placeholder="SKU-123" required>
+                        <input type="text" id="productCode" placeholder="XX001" required>
                     </div>
                     <div class="form-group" style="flex: 1;">
                         <label for="category">Category</label>
